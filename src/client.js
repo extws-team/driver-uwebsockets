@@ -17,7 +17,8 @@ export default class ExtWSUWebSocketsClient extends ExtWSClient {
 		try {
 			this.#uwebsockets_client.subscribe(group);
 		}
-		catch {
+		catch (error) {
+			console.error(error);
 			this.disconnect();
 		}
 	}
@@ -26,7 +27,8 @@ export default class ExtWSUWebSocketsClient extends ExtWSClient {
 		try {
 			this.#uwebsockets_client.unsubscribe(group);
 		}
-		catch {
+		catch (error) {
+			console.error(error);
 			this.disconnect();
 		}
 	}
@@ -35,7 +37,8 @@ export default class ExtWSUWebSocketsClient extends ExtWSClient {
 		try {
 			this.#uwebsockets_client.send(payload);
 		}
-		catch {
+		catch (error) {
+			console.error(error);
 			this.disconnect();
 		}
 	}
@@ -48,13 +51,17 @@ export default class ExtWSUWebSocketsClient extends ExtWSClient {
 			try {
 				this.#uwebsockets_client.close();
 			}
-			catch {}
+			catch (error) {
+				console.error(error);
+			}
 		}
 		else if (is_already_disconnected !== true) {
 			try {
 				this.#uwebsockets_client.end();
 			}
-			catch {}
+			catch (error) {
+				console.error(error);
+			}
 		}
 
 		super.disconnect();

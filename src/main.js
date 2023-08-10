@@ -97,7 +97,6 @@ export default class ExtWSUWebSocketsDriver extends ExtWSDriver {
 	}
 
 	publish(channel, payload) {
-		console.log('publish', channel, payload);
 		this.#server.publish(
 			channel,
 			payload,
