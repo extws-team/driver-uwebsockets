@@ -1,0 +1,52 @@
+{
+	"name": "@extws/driver-uwebsockets",
+	"version": "0.1.0-beta.1",
+	"description": "ExtWS driver based on \"uWebSockets.js\" package.",
+	"publishConfig": {
+		"access": "public",
+		"tag": "beta"
+	},
+	"main": "src/main.js",
+	"type": "module",
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"dependencies": {
+		"uWebSockets.js": "github:uNetworking/uWebSockets.js#809b99d2d7d12e2cbf89b7135041e9b41ff84084"
+	},
+	"peerDependencies": {
+		"@extws/server": "^0.1.0-beta.3",
+		"@kirick/ip": "^0.1.0-beta.2"
+	},
+	"devDependencies": {
+		"@babel/eslint-parser": "7.21.8",
+		"@extws/test-driver": "0.1.0-beta.3",
+		"eslint": "8.41.0",
+		"eslint-config-xo": "0.43.1",
+		"eslint-plugin-import": "2.27.5",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-promise": "6.1.1",
+		"eslint-plugin-unicorn": "47.0.0",
+		"mocha": "^10.2.0"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/extws-team/driver-uwebsockets.git"
+	},
+	"keywords": [
+		"extws",
+		"websocket",
+		"extws-driver",
+		"uWebSockets",
+		"uWebSockets.js"
+	],
+	"author": "Daniil Kirichenko (https://twitter.com/kirickme)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/extws-team/driver-uwebsockets/issues"
+	},
+	"homepage": "https://github.com/extws-team/driver-uwebsockets#readme"
+}
