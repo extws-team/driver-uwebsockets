@@ -66,10 +66,6 @@ export default class ExtWSUWebSocketsDriver extends ExtWSDriver {
 					);
 
 					if (client) {
-						if (typeof payload !== 'string' && Buffer.isBuffer(payload) !== true) {
-							payload = Buffer.from(payload);
-						}
-
 						this.onMessage(
 							client,
 							payload,
